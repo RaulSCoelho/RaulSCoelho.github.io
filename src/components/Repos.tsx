@@ -1,10 +1,7 @@
-'use client'
-
 import { getRepos } from '@/lib/repos'
-import { use } from 'react'
 
-export default function Repos() {
-  const repos = use(getRepos())
+export default async function Repos() {
+  const repos = await getRepos()
 
   return (
     <div>
