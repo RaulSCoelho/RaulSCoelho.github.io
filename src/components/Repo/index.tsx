@@ -6,7 +6,7 @@ interface RepositoryProps {
 }
 
 export function Repo({ repo }: RepositoryProps) {
-  const lastUpdated = new Date(repo.updated_at as string).toLocaleDateString()
+  const lastUpdated = new Date(repo.pushed_at as string).toLocaleDateString()
 
   return (
     <a
