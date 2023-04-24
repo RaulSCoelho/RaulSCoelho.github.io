@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import '../styles/global.css'
 
 export const metadata = {
   title: {
@@ -15,7 +16,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body className="bg-app">
+        <div className="h-screen p-20 flex items-center justify-center">
+          <div className="overflow-hidden w-full h-full max-w-[1480px]">{children}</div>
+        </div>
+      </body>
     </html>
   )
 }

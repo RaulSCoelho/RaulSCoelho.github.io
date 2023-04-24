@@ -2,12 +2,9 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
-      }
+    backgroundImage: {
+      app: 'linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5)'
     }
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar')]
 }
