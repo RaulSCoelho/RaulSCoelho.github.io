@@ -13,7 +13,7 @@ export function Repo({ repo }: RepositoryProps) {
       href={repo.html_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+      className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-min overflow-hidden"
     >
       <div className="p-4">
         <h2 className="text-xl font-bold mb-2">{repo.name}</h2>
