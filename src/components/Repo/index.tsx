@@ -13,19 +13,19 @@ export function Repo({ repo }: RepositoryProps) {
       href={repo.html_url}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-min overflow-hidden"
+      className="flex h-min flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl"
     >
       <div className="p-4">
-        <h2 className="text-xl font-bold mb-2">{repo.name}</h2>
+        <h2 className="mb-2 text-xl font-bold">{repo.name}</h2>
       </div>
-      <div className="bg-gray-100 p-4 flex justify-between items-center">
+      <div className="flex items-center justify-between bg-gray-100 p-4">
         <p className="text-sm text-gray-500">{repo.language}</p>
         <p className="text-sm text-gray-500">
-          <FaStar className="inline-block mr-1" />
+          <FaStar className="mr-1 inline-block" />
           {repo.stargazers_count}
         </p>
       </div>
-      <div className="bg-gray-200 p-4 flex items-center">
+      <div className="flex items-center bg-gray-200 p-4">
         <p className="text-sm text-gray-500">Last updated: {lastUpdated}</p>
       </div>
     </a>

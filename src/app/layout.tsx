@@ -17,8 +17,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <head />
       <body className="bg-[#7F7FD5] bg-app">
-        <div className="h-screen p-20 flex items-center justify-center">
-          <div className="overflow-hidden w-full h-full max-w-[1480px]">{children}</div>
+        <div className="flex h-screen items-center justify-center p-20">
+          <div className="h-full w-full max-w-[1480px] overflow-hidden">{children}</div>
         </div>
       </body>
     </html>

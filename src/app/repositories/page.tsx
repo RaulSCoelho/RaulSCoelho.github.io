@@ -9,9 +9,9 @@ export default async function Repositories() {
   const repos = await getRepos()
 
   return (
-    <div className="h-full flex flex-col">
-      <h1 className="text-3xl font-bold mb-8">Repositories</h1>
-      <div className="px-2 pb-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 overflow-auto scrollbar scrollbar-thumb-[#ffffff4b] scrollbar-track-transparent">
+    <div className="flex h-full flex-col">
+      <h1 className="mb-8 text-3xl font-bold">Repositories</h1>
+      <div className="grid grid-cols-1 gap-4 overflow-auto px-2 pb-8 scrollbar scrollbar-track-transparent scrollbar-thumb-[#ffffff4b] sm:grid-cols-2 md:grid-cols-3">
         {repos?.map(repo => (
           <Repo repo={repo} key={repo.id} />
         ))}
