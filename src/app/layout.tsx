@@ -1,5 +1,7 @@
-import { ReactNode } from 'react'
 import '../styles/global.css'
+import { ReactNode } from 'react'
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
+import { ThemesProvider } from '@/hooks/useTheme'
 
 export const metadata = {
   title: {
@@ -16,9 +18,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head />
-      <body className="bg-[#7F7FD5] bg-app">
-        <div className="flex h-screen items-center justify-center p-20">
-          <div className="h-full w-full max-w-[1480px] overflow-hidden">{children}</div>
+      <body className="theme-dark bg-[#7F7FD5] bg-app">
+        <div className="flex h-screen flex-col items-center justify-center p-10">
+          <ThemesProvider>
+            <ThemeSwitcher />
+            <div className="h-full w-full max-w-[1480px] overflow-hidden rounded-lg bg-skin-fill p-4">{children}</div>
+          </ThemesProvider>
         </div>
       </body>
     </html>
