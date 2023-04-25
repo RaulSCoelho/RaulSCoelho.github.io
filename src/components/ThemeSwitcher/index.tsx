@@ -7,7 +7,7 @@ export function ThemeSwitcher() {
 
   return (
     <button className="focus:outline-none" onClick={toggleTheme}>
-      {theme === 'default' ? <FiMoon size={24} /> : <FiSun size={24} />}
+      {theme === 'dark' ? <FiMoon size={24} /> : <FiSun size={24} />}
     </button>
   )
 }
