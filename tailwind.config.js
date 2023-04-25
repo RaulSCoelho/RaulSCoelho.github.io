@@ -1,4 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+
+function withOpacity(variableName) {
+  return ({ opacity }) => {
+    if (opacity === undefined) return `rgb(var(${variableName}))`
+    return `rgba(var(${variableName}), ${opacity})`
+  }
+}
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -8,22 +16,22 @@ module.exports = {
     extend: {
       textColor: {
         skin: {
-          base: 'var(--color-text-base)',
-          muted: 'var(--color-text-muted)',
-          inverted: 'var(--color-text-inverted)'
+          base: withOpacity('--color-text-base'),
+          muted: withOpacity('--color-text-muted'),
+          inverted: withOpacity('--color-text-inverted')
         }
       },
       backgroundColor: {
         skin: {
-          fill: 'var(--color-fill)',
-          card: 'var(--color-card)',
-          button: 'var(--color-button)',
-          'button-hover': 'var(--color-button-hover)'
+          fill: withOpacity('--color-fill'),
+          card: withOpacity('--color-card'),
+          button: withOpacity('--color-button'),
+          'button-hover': withOpacity('--color-button-hover')
         }
       },
       gradientColorStops: {
         skin: {
-          hue: 'var(--color-fill)'
+          hue: withOpacity('--color-fill')
         }
       }
     }

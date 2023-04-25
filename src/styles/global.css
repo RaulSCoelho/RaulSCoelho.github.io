@@ -4,21 +4,22 @@
 
 @layer base {
   :root {
-    --color-fill: #4338ca;
-    --color-text-base: #ffffff;
-    --color-text-muted: #c7d2fe;
-    --color-text-inverted: #4f46e5;
-    --color-button: #ffffff;
-    --color-button-hover: #eef2ff;
-    --color-card: #ffffff;
+    --color-fill: 67, 56, 202;
+    --color-text-base: 255, 255, 255;
+    --color-text-muted: 199, 210, 254;
+    --color-text-inverted: 79, 70, 229;
+    --color-button: 255, 255, 255;
+    --color-button-hover: 238, 242, 255;
+    --color-card: 255, 255, 255;
   }
+
   .theme-dark {
-    --color-fill: #2d3748;
-    --color-text-base: #f7fafc;
-    --color-text-muted: #a0aec0;
-    --color-text-inverted: #f7fafc;
-    --color-button: #667eea;
-    --color-button-hover: #4c51bf;
-    --color-card: #4a5568;
+    --color-fill: 45, 55, 72;
+    --color-text-base: 247, 250, 252;
+    --color-text-muted: 160, 174, 192;
+    --color-text-inverted: 247, 250, 252;
+    --color-button: 102, 126, 234;
+    --color-button-hover: 76, 81, 191;
+    --color-card: 74, 85, 104;
   }
 }

@@ -22,7 +22,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="flex h-screen flex-col items-center justify-center p-10">
           <ThemesProvider>
             <ThemeSwitcher />
-            <div className="h-full w-full max-w-[1480px] overflow-hidden rounded-lg bg-skin-fill p-4">{children}</div>
+            <div className="mt-2 h-full w-full max-w-[1480px] overflow-hidden rounded-lg bg-skin-fill p-4">
+              {children}
+            </div>
           </ThemesProvider>
         </div>
       </body>
