@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="theme-dark bg-[#7F7FD5] bg-app">
+      <body className="bg-[#7F7FD5] bg-app">
         <div className="flex h-screen flex-col items-center justify-center p-10">
           <ThemesProvider>
             <ThemeSwitcher />
